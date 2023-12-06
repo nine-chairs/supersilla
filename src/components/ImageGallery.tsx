@@ -50,7 +50,13 @@ const ImageGallery: React.FC = () => {
     <div>
       <div className="image-grid">
         {imageUrls.map((url, index) => (
-          <img key={index} src={url} className="gallery-image" onClick={() => openFullscreen(index)} />
+          <img
+            key={index}
+            src={url}
+            className="gallery-image"
+            onClick={() => openFullscreen(index)}
+            loading="lazy" // Add lazy loading attribute
+          />
         ))}
       </div>
 
